@@ -6,7 +6,7 @@ Hacktoberfest is a program by Digital Ocean, DEV and Github, where you can easil
 # Steps to contribute.
 1. Register for Hacktoberfest  https://hacktoberfest.digitalocean.com/
 2. Fork this repository 
-3. Add a Program in the specified folder of the language you like
+3. Add a Program in the specified folder of the language you like (if your language is not specified you can make that folder and then add your code in that folder)
 4. Send a pull request and you are done with your first contribution!
 5. Give this project a star if you liked working on it and share it as much as you can with people new to Open Source
 
