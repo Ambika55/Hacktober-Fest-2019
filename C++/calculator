@@ -1,0 +1,25 @@
+// program in C++ to implement a menu driven calculator with switch case.
+
+#include<iostream>
+using namespace std;
+main()
+{
+    int c,a,b;
+    do
+    {
+        cout<<"Enter two numbers : ";
+        cin>>a>>b;
+        cout<<"\n Menu: \n 1.Addition \n 2.Subtraction \n 3.Multiplication \n 4.Division \n 5.Modulus \n Enter your choice...";
+        cin>>c;
+        switch(c)
+        {
+            case 1: cout<<a+b; break;
+            case 2: cout<<a-b; break;
+            case 3: cout<<a*b; break;
+            case 4: cout<<a/b; break;
+            case 5: cout<<a%b; break;
+        }
+        cout<<"\n";
+    }while(c>=1 && c<=5);
+    return 0;
+}
