@@ -1,13 +1,14 @@
 n=int(input())
-
-div=2
-while(div*div<=n):
-    if(n%div==0):
-        print("NOT PRIME")
-        exit()
-    div+=1
-
+count=0
 if(n==1):
-    print("None")
-else:
-    print("PRIME")
+    count=2
+    print("1 is neither prime nor composite")
+for i in range(2,n):
+    if(n%i==0):
+        count=1
+        break
+if(count==0):
+    print("Prime")
+elif(count==1):
+    print("Not Prime")
+
