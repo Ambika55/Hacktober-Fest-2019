@@ -1,0 +1,23 @@
+// This program tells whether a character entered is in
+// uppercase
+// lowercase
+// digit
+// special character
+
+#include<iostream>
+using namespace std;
+main()
+{
+    char c;
+    cout<<"Enter the character : ";
+    cin>>c;
+    if(c>=65 && c<=90)
+        cout<<"\n It is an Uppercase letter.";
+    else if(c>=97 && c<=122)
+        cout<<"\n It is a Lowercase letter.";
+    else if(c>=48 && c<=57)
+        cout<<"\n It is a digit.";
+    else
+        cout<<"\n It is a special character.";
+return 0;
+}
