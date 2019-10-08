@@ -14,7 +14,7 @@ int main()
          for(i=0;i<n;i++)
          {
          	if(a[i]==x)
-         	printf("No. found at index no : %d",i);
+         	printf("No. found at position no : %d",i+1);
          	
          
 		 }
