@@ -1,0 +1,35 @@
+// a program in C++ to create a class volume using function overloading  to calculate volume of cylinder , sphere and cuboid.
+
+#include<iostream>
+#include<math.h>  //header file for pow() function
+using namespace std;
+class volume
+{
+    float vol;
+public:
+    volume(float l, float b, float h )  // constructor for cuboid
+    {
+        vol=l*b*h;
+    }
+   volume(float radius)  //constructor for sphere
+    {
+        vol=(4/3.0)*3.14*pow(radius,3);
+    }
+  volume(float radius, float height)  //constructor for cylinder
+    {
+        vol=3.14*pow(radius,2)*height;
+    }
+    float display()
+    {
+        return vol;
+    }
+
+};
+main()
+{
+    volume cyl(2,4.5),cuboid(2,4.5,6.3),sphere(2);
+    cout<<"Volume of Cylinder : "<<cyl.display();
+    cout<<"\nVolume of Cuboid : "<<cuboid.display();
+    cout<<"\nVolume of Sphere : "<<sphere.display();
+    return 0;
+}
