@@ -1,0 +1,59 @@
+#include <iostream>
+using namespace std;
+
+class SI
+{
+	private:
+		double P;
+		double R;
+		double T;
+		
+		
+	public :
+		SI(double p , double r, double t)
+		{
+			P = p;
+			R = r;
+			T = t;
+			
+		}
+		
+		SI(double p, double r)
+		{
+			P = p;
+			R = r;
+			T = 1;
+		}
+		
+		SI(double p)
+		{
+			P = p;
+			R = 15;
+			T = 1;
+		}
+		
+		~SI()
+		{
+			cout<<"Constructor deleted"<<endl;
+		}
+		
+		double calculate()
+		{
+			return P*R*T/100;
+		}
+};
+
+int main()
+{
+	SI o1(250.38, 16.5, 2.5);
+		SI o2(250.38, 17.5);
+	SI o3(250.38);
+	
+	cout << "Simple interest 1 : "<<o1.calculate()<<" Rs"<<endl;
+	cout << "Simple interest 2 : "<<o2.calculate()<<" Rs"<<endl;
+	cout<< "Simple interest 3 : "<<o3.calculate()<<" Rs"<<endl;
+}
+
+	
+	
+	
