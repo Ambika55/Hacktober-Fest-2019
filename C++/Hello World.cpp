@@ -4,12 +4,12 @@ class node
 {
     public:
     int data;
-   node*next;
+    node*next;
 
    node(int d)
   {
-       data=d;
-       next=NULL;
+       this->data = d;
+       this->next = NULL;
   }
 
 };
