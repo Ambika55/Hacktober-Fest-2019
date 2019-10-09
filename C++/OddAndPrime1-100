@@ -1,0 +1,41 @@
+//This program gives numbers between 1 to 100 which are
+// odd
+//prime
+
+
+#include<iostream>
+using namespace std;
+int isPrime(int n)    // function to check if a number is prime or not
+{
+   for(int j=2;j<=n/2;j++)
+         {
+            if(n%j==0)
+                return 0;
+         }
+    return 1;
+}
+main()
+{
+    int c_odd=0,c_prime=0;
+    cout<<"Odd numbers..\n";
+    for(int i=1;i<=100;i++)//loop to give odd numbers
+    {
+        if(i%2!=0)
+           {
+              c_odd++;
+              cout<<i<<"\t";
+           }
+    }
+    cout<<"\nTotal Odd numbers between 1 and 100 is "<<c_odd;
+    cout<<"\nPrime numbers..\n";
+    for(int i=1;i<=100;i++) // loop to give prime numbers
+    {
+        if(isPrime(i))
+         {
+          cout<<i<<"\t";
+          c_prime++;
+         }
+    }
+        cout<<"\nTotal Prime numbers between 1 and 100 is "<<c_prime;
+    return 0;
+}
