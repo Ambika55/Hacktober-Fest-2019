@@ -1,30 +1,44 @@
-#include<iostream>
+//implementation of insertion sort
+
+#include <iostream>
 using namespace std;
 
-void InsertionSort(int arr[], int size)
+void sort(int arr[], int n)
 {
-    int i,j,v;
-    for(i=1; i<=size; i++)
+    int i,j,key;
+    for(i=1; i<n; ++i)
     {
-        v = arr[i];
-        j=i;
-        while(arr[j-1]>v && j>=1)
+        key = arr[i];
+        // 1. I changed here 
+        j = i-1;
+
+        while(j>=0 && arr[j]>key)
         {
-            arr[j] = arr[j-1];
-            j--;
+            arr[j+1] = arr[j];
+            j=j-1;
         }
-        arr[j]= v;
+        arr[j+1] = key;
+    }
+
+}
+
+void print(int *arr, int n)
+{ 
+    int i;
+    for(i=0; i<n; ++i)
+    {
+        cout<<arr[i]<<" ";
     }
 }
 
-int main()
+int main() 
 {
-    int arr[20], size,i;
-    cin>>size;
-    for(i=0; i<size; i++)
-        cin>>arr[i];
-    InsertionSort(arr,size);
-    cout<<"\n After Sorting the Array : ";
-    for(i=0; i<size; i++)
-        cout<<arr[i]<<" ";
+   int arr[50],n;
+   cin>>n;
+   for(int i=0; i<n; ++i)
+   {
+       cin>>arr[i];
+   }
+   sort(arr,n);
+   print(arr,n);
 }
