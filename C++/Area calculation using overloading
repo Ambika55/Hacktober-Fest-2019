@@ -1,0 +1,27 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int area(int, int);
+float area(int);
+int main()
+{
+    int r;
+	cout<<"Enter radius\n";
+	cin>>r;
+	float A= area(r);
+	cout<<A;
+	int l,b;
+	cout<<"\nEnter length and breadth\n";
+	cin>>l>>b;
+    int	a= area(l, b);
+	cout<<a;
+		
+}
+float area(int r)
+{
+	return(3.14*r*r);
+}
+int area(int l, int b)
+{
+	return(l*b);
+}
