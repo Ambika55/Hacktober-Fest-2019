@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+class base
+{
+	public:
+		void display()
+		{
+			cout<<"\n Displaying base";
+		}
+		virtual  void show()
+		{
+			cout<<"\n showing base";
+			
+		}
+};
+class derived: public base
+{
+	public:
+		void display()
+		{
+			cout<<" \n Displaying derived";
+		
+		}
+		void show()
+		{
+			cout<<"\n showing derived";
+		}
+	
+};
+int main(){
+	base x;
+	derived y;
+	base *ptr1;
+	cout<<"\n ptr1 points to base\n";
+	ptr1 = &x;
+	ptr1 -> display();
+	ptr1 -> show();
+	cout<<"\n ptr1 pints to derived";
+	ptr1 = &y;
+	ptr1 -> display();
+	ptr1 -> show();
+	
+	return 0;
+}
