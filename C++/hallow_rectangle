@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i,n,m,j,c;
+	cout<<"Enter the number of rows in rectangle"<<endl;
+	cin>>n;
+	cout<<"Enter the number of columns in rectangle"<<endl;
+	cin>>m;
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<m;j++)
+		{
+			if(i==0||i==n-1||j==0||j==m-1)
+			 cout<<"*";
+			
+			else 
+			 cout<<" ";
+		}
+		cout<<endl;
+	}
+	return 0;
+}
