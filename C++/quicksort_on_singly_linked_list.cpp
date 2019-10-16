@@ -1,6 +1,5 @@
 // C++ program for Quick Sort on Singly Linled List 
-#include <iostream> 
-#include <cstdio> 
+#include <bits/stdc++.h>
 using namespace std; 
 
 /* a node of the singly linked list */

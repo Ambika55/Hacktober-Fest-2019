@@ -1,0 +1,39 @@
+#include <iostream> 
+#include <string.h> 
+using namespace std; 
+
+class AddString { 
+  
+public: 
+    char s1[25], s2[25]; 
+  
+    // Parametrized Constructor 
+    AddString(char str1[], char str2[]) 
+    { 
+        // Initialize the string to class object 
+        strcpy(this->s1, str1); 
+        strcpy(this->s2, str2); 
+    } 
+  
+    // Overload Operator+ to concat the string 
+    void operator+() 
+    { 
+        cout << "\nConcatenation: " << strcat(s1, s2); 
+    } 
+}; 
+  
+// Driver Code 
+int main() 
+{ 
+    char str1[25], str2[25];
+	cout<<"Enter first string : ";
+	gets(str1);
+	cout<<"Enter second string : ";
+	gets(str2);
+  
+       AddString a1(str1, str2); 
+  
+    // Call operator function 
+    +a1; 
+    return 0; 
+}
