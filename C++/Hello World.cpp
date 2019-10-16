@@ -18,7 +18,24 @@ void insertathead(node*&head,int data)
 {
     node *n=new node(data);
     n->next=head;
-    head =n;
+    head=n;
+}
+
+void insertAtI(node*head, int i, int data)
+{
+ node*newNode= new node(data);
+ int count=0;
+ node*temp=head;
+ while(count<(i-1) && temp!=NULL)
+ {
+ temp=temp->next;
+ count++;
+ }
+ if(temp!=NULL)
+ {
+ newNode->next=temp->next;
+ temp->next=newNode;
+ }
 }
 
 void print(node*head)
@@ -28,7 +45,7 @@ void print(node*head)
  {
    cout<<temp->data;
    temp=temp->next;
- }
+ } 
  
 }
 
