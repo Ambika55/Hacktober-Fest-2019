@@ -55,6 +55,9 @@ int main()
  insertathead(head,5);
  insertathead(head,4);
  insertathead(head,3);
+ insertAtI(head,2,10);
+ print(head);
+ insertAtI(head,5,18);
  print(head);
 
 }
