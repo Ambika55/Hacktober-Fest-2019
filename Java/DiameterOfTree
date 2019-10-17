@@ -1,0 +1,46 @@
+
+ // -------Definition for a binary tree node.---------
+  public class TreeNode {
+      int val;
+      TreeNode left;
+      TreeNode right;
+      TreeNode(int x) { val = x; }
+  }
+ 
+class Solution {
+  // max will store the diameter of the tree
+    int max =0;
+    public int diameterOfBinaryTree(TreeNode root) {
+        solution(root);
+        if(max==0){
+            return 0;
+        }
+        return max-1;
+    }
+    public int solution(TreeNode root){
+        if(root ==null){
+            return 0;
+        }
+        int left = solution(root.left);
+        int right =solution(root.right);
+        
+        int value = left+right+1;
+        if(max<value){
+            max= value;
+        }
+        return 1+Math.max(left,right);
+    }
+    
+    // ----------Driver function ----------
+    public static void main(String[] args){
+        Solution tree = new Solution(); 
+        tree.root = new TreeNode(1); 
+        tree.root.left = new TreeNode(2); 
+        tree.root.right = new TreeNode(3); 
+        tree.root.left.left = new TreeNode(4); 
+        tree.root.left.right = new TreeNode(5); 
+  
+        System.out.println("The diameter of given binary tree is : "
+                           + tree.diameterOfBinaryTree(root));
+    }
+}
