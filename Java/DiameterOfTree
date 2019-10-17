@@ -10,6 +10,7 @@
 class Solution {
   // max will store the diameter of the tree
     int max =0;
+    TreeNode root;
     public int diameterOfBinaryTree(TreeNode root) {
         solution(root);
         if(max==0){
