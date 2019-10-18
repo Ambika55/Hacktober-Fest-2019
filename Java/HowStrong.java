@@ -28,9 +28,9 @@ public class HowStrong {
 				}
 			}
 			if(hasUpperCase && hasLowerCase && hasDigit && hasSpecial) {
-				System.out.println("STRONG") ;
+				System.out.println("STRONG PASSWORD :)") ;
 			}else {
-				System.out.println("WEAK") ;
+				System.out.println("WEAK PASSWORD :(") ;
 			}
 		}else {
 			System.out.println("Must be 8 characters long at least!") ;
