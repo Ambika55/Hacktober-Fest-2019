@@ -42,7 +42,7 @@ void Time::addTime(Time T1,Time T2)
  
  
 int main()
-{
+{cout<<"Welcome to Time addition Program"<<endl;
 	//int* arr = new int[3];
 	
     Time T1,T2,T3;
