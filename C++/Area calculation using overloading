@@ -4,7 +4,7 @@ using namespace std;
 int area(int, int);
 float area(int);
 int main()
-{
+{cout<<"Welcome to the Area Calculator"<<endl;
     int r;
 	cout<<"Enter radius\n";
 	cin>>r;
