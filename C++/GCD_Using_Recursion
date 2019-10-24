@@ -1,0 +1,32 @@
+/*gcd of two numbers using recursion*/
+#include<iostream>
+using namespace std;
+int gcd(int a,int b )
+{
+    if(a%b==0)
+    {
+        return b;
+    }
+    return gcd(b,a%b);
+}
+int main ()
+{
+    int a,b,small,big;
+    cout<<"\nEnter the first number ";
+    cin>>a;
+    cout<<"\nEnter the second number ";
+    cin>>b;
+    if(a>b)
+    {
+        big=a;
+        small=b;
+    }
+    else
+    {
+        small=a;
+        big=b;
+    }
+    int res=gcd(big,small);
+    cout<<res<<endl;
+    return 0;
+}
