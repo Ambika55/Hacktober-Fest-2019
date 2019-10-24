@@ -20,8 +20,7 @@ void insertathead(node*&head,int data)
     n->next=head;
     head=n;
 }
-
-void insertAtI(node*head, int i, int data)
+void insertAti(node*head, int i, int data)
 {
  node*newNode= new node(data);
  int count=0;
@@ -55,9 +54,9 @@ int main()
  insertathead(head,5);
  insertathead(head,4);
  insertathead(head,3);
- insertAtI(head,2,10);
+ insertAti(head,2,10);
  print(head);
- insertAtI(head,5,18);
+ insertAti(head,5,18);
  print(head);
 
 }
