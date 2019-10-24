@@ -1,0 +1,67 @@
+#include<iostream>
+#include<queue>
+using namespace std;
+struct node
+{
+    int data;
+    node*left;
+    node*right;
+    node(int data)
+    {
+        this->data=data;
+        left=NULL;
+        right=NULL;
+    }
+};
+node*create_tree()
+{
+    cout<<"\nEnter data of root and -1 to exit "<<endl;
+    int data;
+    cin>>data;
+    node*root=NULL;
+    queue<node*> q;
+    if(data!=-1)
+    {
+        root=new node(data);
+        q.push(root);
+    }
+    while(!q.empty())
+    {
+        node*curr=q.front();
+        q.pop();
+        cout<<"\nEnter data for the left child of "<<curr->data<<" ";
+        cin>>data;
+        if(data!=-1)
+        {
+            node*left=new node(data);
+            curr->left=left;
+            q.push(left);
+        }
+        cout<<"\nEnter data for the right child of "<<curr->data<<" ";
+        cin>>data;
+        if(data!=-1)
+        {
+            node*right=new node(data);
+            curr->right=right;
+            q.push(right);
+        }
+    }
+    return root;
+}
+int height(node*root)
+{
+    if(root==NULL)
+    {
+        return 0;
+    }
+    int lh=height(root->left);
+    int rh=height(root->right);
+    return (1+max(lh,rh));
+}
+int main ()
+{
+    node*root=create_tree();
+    int res=height(root);
+    cout<<"\nThe height of tree is "<<res<<endl;
+    return 0;
+}
