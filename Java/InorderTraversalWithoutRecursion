@@ -1,6 +1,6 @@
 // this function will take root of the tree and it will return arraylist of integer which is in inorder fashion
 // Here I have used stack so this is iterative program to get inorder of tree 
-// Driver function need to be build
+// Driver function need to be build.
 
 public ArrayList<Integer> inorderTraversal(TreeNode A) {
          ArrayList<Integer> ar = new ArrayList<Integer>();
