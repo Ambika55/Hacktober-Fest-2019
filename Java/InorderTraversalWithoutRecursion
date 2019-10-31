@@ -1,0 +1,28 @@
+// this function will take root of the tree and it will return arraylist of integer which is in inorder fashion
+// Here I have used stack so this is iterative program to get inorder of tree 
+// Driver function need to be build.
+
+public ArrayList<Integer> inorderTraversal(TreeNode A) {
+         ArrayList<Integer> ar = new ArrayList<Integer>();
+         Stack<TreeNode> st = new Stack<TreeNode>();
+         st.push(A);
+        while(!st.empty()){
+          
+            TreeNode top = st.peek();
+            if(top.left!=null){
+                
+                st.push(top.left);
+                // important thing is we have to set top.left to null otherwise it will struct in a loop
+                top.left=null;
+            }
+            else{
+                TreeNode v = st.pop();
+                ar.add(v.val);
+             //   i++;
+                if(v.right!=null){
+                    st.push(v.right);
+                }
+            }
+        }
+        return ar;
+    }
